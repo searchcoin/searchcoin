@@ -170,6 +170,7 @@ public:
 
         vSeeds.clear();
         // Note that of those with the service bits flag, most only support a subset of possible options
+        vSeeds.push_back(CDNSSeedData("seed0", "chain001.bitchk.com",true));
         vSeeds.push_back(CDNSSeedData("seed1", "ser001.bitchk.com",true));
         vSeeds.push_back(CDNSSeedData("seed2", "ser002.bitchk.com",true));
         vSeeds.push_back(CDNSSeedData("seed3", "ser003.bitchk.com",true));
@@ -195,7 +196,7 @@ public:
 
         checkpointData = (CCheckpointData) {
             boost::assign::map_list_of
-            (  0, uint256S("0x8b3aa1f1d87b9533d9d36b63875c0c97d833cd5cd8585c05030783a515a3345b"))
+            (  0, uint256S("0x1ed562a8f1d59fa238a157b37823754567617b2e88c640d47c21c5173f1a06e5"))
         };
 
         chainTxData = ChainTxData{
@@ -247,7 +248,7 @@ public:
         consensus.nMinimumChainWork = uint256S("0x000000000000000000000000000000000000000000000000000000054cb9e7a0");
 
         // By default assume that the signatures in ancestors of this block are valid.
-        consensus.defaultAssumeValid = uint256S("0x43a16a626ef2ffdbe928f2bc26dcd5475c6a1a04f9542dfc6a0a88e5fcf9bd4c"); //8711
+        consensus.defaultAssumeValid = uint256S("0x00"); //8711
 
         pchMessageStart[0] = 0x73;//S
         pchMessageStart[1] = 0x65;//E
@@ -288,7 +289,7 @@ public:
 
         checkpointData = (CCheckpointData) {
             boost::assign::map_list_of
-            (  0, uint256S("0xf47f333675ef7872069b81c29eb84003174ea12a42db657dd133c4ca8d9d6b80"))
+            (  0, uint256S("0x4011c363040003218272d6b398cf57dddc7e04495994ff3f468de99625cfcbbb"))
         };
 
         chainTxData = ChainTxData{
