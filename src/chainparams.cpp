@@ -171,14 +171,8 @@ public:
         vSeeds.clear();
         // Note that of those with the service bits flag, most only support a subset of possible options
         vSeeds.push_back(CDNSSeedData("seed0", "chain001.bitchk.com",true));
-        vSeeds.push_back(CDNSSeedData("seed1", "ser001.bitchk.com",true));
-        vSeeds.push_back(CDNSSeedData("seed2", "ser002.bitchk.com",true));
-        vSeeds.push_back(CDNSSeedData("seed3", "ser003.bitchk.com",true));
-        vSeeds.push_back(CDNSSeedData("seed4", "ser004.bitchk.com",true));
-        vSeeds.push_back(CDNSSeedData("seed5", "ser005.bitchk.com",true));
-        vSeeds.push_back(CDNSSeedData("seed6", "ser006.bitchk.com",true));
-        vSeeds.push_back(CDNSSeedData("seed7", "ser007.bitchk.com",true));
-        vSeeds.push_back(CDNSSeedData("seed8", "ser008.bitchk.com",true));
+        vSeeds.push_back(CDNSSeedData("seed1", "ssc001.bitchk.com",true));
+       
 
         base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1,63);//S
         base58Prefixes[SCRIPT_ADDRESS] = std::vector<unsigned char>(1,125);//s
@@ -271,7 +265,7 @@ public:
         vFixedSeeds.clear();
         vSeeds.clear();
         // nodes with support for servicebits filtering should be at the top
-        vSeeds.push_back(CDNSSeedData("dns001", "ser001.bitchk.com",true));
+        vSeeds.push_back(CDNSSeedData("test001", "ssc001-t.bitchk.com",true));
         base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1,64);//
         base58Prefixes[SCRIPT_ADDRESS] = std::vector<unsigned char>(1,126);//
 
