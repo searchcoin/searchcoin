@@ -18,7 +18,6 @@
 #include "arith_uint256.h"
 
 
-bool fSearchGenesis = true;
 
 static CBlock CreateGenesisBlock(const char* pszTimestamp, const CScript& genesisOutputScript, uint32_t nTime, uint32_t nNonce, uint32_t nBits, int32_t nVersion, const CAmount& genesisReward)
 {
@@ -58,7 +57,7 @@ static CBlock CreateGenesisBlock(const char* pszTimestamp, const CScript& genesi
  */
 static CBlock CreateGenesisBlock(uint32_t nTime, uint32_t nNonce, uint32_t nBits, int32_t nVersion, const CAmount& genesisReward)
 {
-    const char* pszTimestamp = "SEARCHCOIN START CHANGE PAYMENT SYSTEM  11/1/2017";
+    const char* pszTimestamp = "SEARCHCOIN START CHANGE PAYMENT SYSTEM  12/1/2017";
     const CScript genesisOutputScript = CScript() << 
         ParseHex("0497840a64db041831f1eb97b6377e3576f2df358355403b525bb807fa23c285367f0359cf47fd72e890947d253b98defc8625d8ba31f4af51f6d14d6ede08dfa6") << OP_CHECKSIG;
     return CreateGenesisBlock(pszTimestamp, genesisOutputScript, nTime, nNonce, nBits, nVersion, genesisReward);
@@ -79,8 +78,8 @@ class CMainParams : public CChainParams {
 public:
     CMainParams() {
         strNetworkID = "main";
-        uint32_t GEN_TIME = 1509498000;
-        unsigned int NOUNCE = 2505252;
+        uint32_t GEN_TIME = 1512086400;
+        unsigned int NOUNCE = 437570;
         consensus.BIP34Height = 0;
         consensus.BIP65Height = 0; // bab3041e8977e0dc3eeff63fe707b92bde1dd449d8efafb248c27c8264cc311a
         consensus.BIP66Height = 0; // 7aceee012833fa8952f8835d8b1b3ae233cd6ab08fdb27a771d2bd7bdc491894
@@ -124,9 +123,10 @@ public:
 
         genesis = CreateGenesisBlock(GEN_TIME,NOUNCE, 0x1e0fffff, 1, 50 * COIN);
         consensus.hashGenesisBlock = genesis.GetHash();
-        uint256 hashGenesis = uint256S("0x1ed562a8f1d59fa238a157b37823754567617b2e88c640d47c21c5173f1a06e5");
-        uint256 hashMerkelRoot = uint256S("0xf7c93346cf19c99b31d104810679745c019f8ed36f908c13703ddd0dd1659ced");
-        
+        uint256 hashGenesis = uint256S("0x63396542c8c796366a25944ff5d37d69f7e56cad7f96cf36f8f5a96d7171d383");
+        uint256 hashMerkelRoot = uint256S("0x26d1baeef50893e185f60fe8b75b7fda50174f3331d8ce21228136c95b346722");
+     
+
         assert(consensus.hashGenesisBlock == hashGenesis);
         assert(genesis.hashMerkleRoot == hashMerkelRoot);
 
@@ -173,8 +173,8 @@ class CTestNetParams : public CChainParams {
 public:
     CTestNetParams() {
         strNetworkID = "test";
-        uint32_t GEN_TIME = 1509498001;
-        unsigned int NOUNCE = 369737;
+        uint32_t GEN_TIME = 1512086401;
+        unsigned int NOUNCE = 129829;
         consensus.BIP34Height = 0;
         // consensus.BIP34Hash = uint256S("8075c771ed8b495ffd943980a95f702ab34fce3c8c54e379548bda33cc8c0573");
         consensus.BIP65Height = 76; // 8075c771ed8b495ffd943980a95f702ab34fce3c8c54e379548bda33cc8c0573
@@ -215,9 +215,9 @@ public:
 
         genesis = CreateGenesisBlock(GEN_TIME,NOUNCE, 0x1e0fffff, 1, 50 * COIN);
         consensus.hashGenesisBlock = genesis.GetHash();
-        uint256 hashGenesis = uint256S("0x4011c363040003218272d6b398cf57dddc7e04495994ff3f468de99625cfcbbb");
-        uint256 hashMerkelRoot = uint256S("0xa70af14588b0cae2a9843cdedd6b323f2612acd3bc65dc07a5e62772728929fa");
-       
+        uint256 hashGenesis = uint256S("0xfa12b1a1e3d034b1e0a0315b43f0f12086ee891d9ea653f05a8f4e0f69836504");
+        uint256 hashMerkelRoot = uint256S("0xb26aa0dcfe8b7e7003b4f93f27b14ddcfdd025b382e23ab5487159d56b803fdb");
+        
         assert(consensus.hashGenesisBlock == hashGenesis);
         assert(genesis.hashMerkleRoot == hashMerkelRoot);
 
@@ -264,8 +264,8 @@ class CRegTestParams : public CChainParams {
 public:
     CRegTestParams() {
         strNetworkID = "regtest";
-        uint32_t GEN_TIME = 1509498002;
-        unsigned int NOUNCE = 458513;
+        uint32_t GEN_TIME = 1512086402;
+        unsigned int NOUNCE = 1888938;
         consensus.BIP34Height = 100000000; // BIP34 has not activated on regtest (far in the future so block v1 are not rejected in tests)
         // consensus.BIP34Hash = uint256();
         consensus.BIP65Height = 1351; // BIP65 activated on regtest (Used in rpc activation tests)
@@ -303,9 +303,9 @@ public:
 
         genesis = CreateGenesisBlock(GEN_TIME,NOUNCE, 0x1e0fffff, 1, 50 * COIN);
         consensus.hashGenesisBlock = genesis.GetHash();
-        uint256 hashGenesis = uint256S("0x33c275811f7154939973c5f46abb10d800ba3cd90b28e6418ae31864a34d898b");
-        uint256 hashMerkelRoot = uint256S("0xbe8e8e6bde9c81faf3376d4ab68adccd7b91328c839ab0cc2c5466d1bea95c60");
-       
+        uint256 hashGenesis = uint256S("0x407e6bfa265f2d2a215f7c7ac4d11926e6af68ce76aa8d154bcbaae6910229a8");
+        uint256 hashMerkelRoot = uint256S("0xa02de444d3ac54cc9f6ceee933bfa0c892a3301c2c15292f51773628dd776a6e");
+      
         assert(consensus.hashGenesisBlock == hashGenesis);
         assert(genesis.hashMerkleRoot == hashMerkelRoot);
 
