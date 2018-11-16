@@ -1234,7 +1234,15 @@ CAmount GetBlockSubsidy(const CBlockIndex * pindexPrev , const Consensus::Params
     else if(pindexPrev->nHeight <BLOCK_HEIGHT_INIT){
         nSubsidy = PREMINE_MONEY_COIN / BLOCK_HEIGHT_INIT; // 
     }else{
-        nSubsidy = BLOCK_REWARD_COIN; //
+          if( pindexPrev->nHeight < 96870){// 적용할 블럭의 높이 해당블럭의 높이보다 낮으면 기존의 방식으로 보상을 지금.
+
+            nSubsidy = BLOCK_REWARD_COIN; //    
+
+        }else { // 지정한 높이보다 크거나 같으면 새로운 보상을 적용
+
+            nSubsidy = 100 * COIN;; // 수정될 보상금액. 
+
+        }
     }
     //limit of reward
     if (pindexPrev != NULL && (pindexPrev->nMoneySupply + nSubsidy) >= MAX_MONEY) {
