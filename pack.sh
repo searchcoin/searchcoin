@@ -1,5 +1,5 @@
 #!/bin/sh
-coin=qcity
+coin=searchcoin
 version=0.14.2.3
 platform=`uname -a | awk '{print tolower($1)}'`
 arch=`uname -m`
