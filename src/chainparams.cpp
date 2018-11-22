@@ -109,6 +109,7 @@ public:
         // By default assume that the signatures in ancestors of this block are valid.
         //consensus.defaultAssumeValid = uint256S("0x1673fa904a93848eca83d5ca82c7af974511a7e640e22edc2976420744f2e56a"); //1155631
         consensus.defaultAssumeValid = uint256S("0x00");
+        consensus.defaultAssumeValid = uint256S("0xcf9325a07c7389f8df7ed5d12ae6db3a54816ae16790c0df6209e14945685c72");// 349053
         /**
          * The message start string is designed to be unlikely to occur in normal data.
          * The characters are rarely used upper ASCII, not valid as UTF-8, and produce
@@ -132,9 +133,8 @@ public:
 
         vSeeds.clear();
         // Note that of those with the service bits flag, most only support a subset of possible options
-        vSeeds.push_back(CDNSSeedData("seed0", "chain001.bitchk.com",true));
         vSeeds.push_back(CDNSSeedData("seed1", "ssc001.bitchk.com",true));
-       
+        vSeeds.push_back(CDNSSeedData("seed2", "seed.searchcoin.co.kr",true));
 
         base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1,63);//S
         base58Prefixes[SCRIPT_ADDRESS] = std::vector<unsigned char>(1,125);//s
@@ -153,6 +153,7 @@ public:
         checkpointData = (CCheckpointData) {
             boost::assign::map_list_of
             (  0, uint256S("0x1ed562a8f1d59fa238a157b37823754567617b2e88c640d47c21c5173f1a06e5"))
+             (  349053, uint256S("0xcf9325a07c7389f8df7ed5d12ae6db3a54816ae16790c0df6209e14945685c72"))
         };
 
         chainTxData = ChainTxData{
