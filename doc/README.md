@@ -5,7 +5,7 @@ Setup
 ---------------------
 Searchcoin Core is the original Searchcoin client and it builds the backbone of the network. However, it downloads and stores the entire history of Searchcoin transactions (which is currently several GBs); depending on the speed of your computer and network connection, the synchronization process can take anywhere from a few hours to a day or more.
 
-To download Searchcoin Core, visit [searchcoin.com](http://www.searchcoin.org).
+To download Searchcoin Core, visit [searchcoin.com](http://www.searchcoin.co.kr).
 
 Running
 ---------------------

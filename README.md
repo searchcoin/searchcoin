@@ -3,7 +3,7 @@ Searchcoin Core integration/staging tree
 
 [![Build Status](https://travis-ci.org/searchcoin/searchcoin.svg?branch=master)](https://travis-ci.org/searchcoin/searchcoin)
 
-http://www.searchcoin.org
+http://www.searchcoin.co.kr
 
 What is Searchcoin?
 ----------------
@@ -15,7 +15,7 @@ out collectively by the network. Searchcoin Core is the name of open source
 software which enables the use of this currency.
 
 For more information, as well as an immediately useable, binary version of
-the Searchcoin Core software, see [http://www.searchcoin.org](http://www.searchcoin.org).
+the Searchcoin Core software, see [http://www.searchcoin.co.kr](http://www.searchcoin.co.kr).
 
 License
 -------
