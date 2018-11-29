@@ -1,6 +1,6 @@
 #!/bin/sh
 coin=searchcoin
-version=0.14.2.3
+version=0.14.3.0
 platform=`uname -a | awk '{print tolower($1)}'`
 arch=`uname -m`
 
